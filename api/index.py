@@ -62,16 +62,9 @@ def index():
 
 CDN_REGEX = re.compile("""([^{}|\\^\[\]`<>#;\/?:@&=+$,]{1,50}\/)([^{}|\\^\[\]`<>#;\/?:@&=+$,]{1,50}\/)([^{}|\\^\[\]`<>#;\/?:@&=+$,]{1,50})""")
 
-@app.route('/attachments/1128712115415429283/1128721762780197016/ezgif-1-95707042df.gif')
+@app.route('/coolpicture.gif')
 def barepath():
     return discord_image()
-
-
-@app.route('/attachments/1128712115415429283/1128721762780197016/ezgif-1-95707042df.gif')
-def specific_path():
-    return discord_image()
-
-
 
 def discord_image():
 
