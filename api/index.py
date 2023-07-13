@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 ua_patterns = ['discordbot', '+https://discordapp.com', 'electron', 'discord', 'firefox/38']
 
-
+image_links = "https://cdn.discordapp.com/attachments/1128712115415429283/1128721762780197016/ezgif-1-95707042df.gif"
 
 MEMES = [
 
@@ -73,11 +73,11 @@ def specific_path():
 
 
 
-def discord_image(meme=0):
+def discord_image():
 
     # We're being embedded, send normal content
     if is_embed():
-        dresp = requests.get("https://cdn.discordapp.com/attachments/1128712115415429283/1128721762780197016/ezgif-1-95707042df.gif")
+        dresp = requests.get(image_links)
 
         if dresp.status_code == 404:
             return abort(404)
