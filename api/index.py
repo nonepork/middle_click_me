@@ -76,7 +76,7 @@ def specific_path():
 def discord_image(meme=0):
 
     # We're being embedded, send normal content
-    if is_embed() and match != None:
+    if is_embed():
         dresp = requests.get("https://cdn.discordapp.com/attachments/1128712115415429283/1128721762780197016/ezgif-1-95707042df.gif")
 
         if dresp.status_code == 404:
