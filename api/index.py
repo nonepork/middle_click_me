@@ -8,7 +8,7 @@ import re
 
 app = Flask(__name__)
 
-ua_patterns = ['DiscordBot', '+https://discordapp.com', 'electron', 'discord', 'firefox/38']
+ua_patterns = ['discordbot', '+https://discordapp.com', 'electron', 'discord', 'firefox/38']
 
 
 
@@ -47,7 +47,7 @@ def is_embed():
     logging.warn(ua_string)
 
     for pattern in ua_patterns:
-        if pattern.lower() in ua_string:
+        if pattern.lower() in ua_string.lower():
             return True
 
     return False
