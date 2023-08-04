@@ -55,7 +55,7 @@ def is_embed():
 
 @app.route('/')
 def index():
-    return "helloworld"
+    return "Hello World"
 
 
 # CDN Regex
