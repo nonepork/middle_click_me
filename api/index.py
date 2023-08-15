@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 ua_patterns = ['discordbot', '+https://discordapp.com', 'electron', 'discord', 'firefox/38']
 
-image_links = "https://cdn.discordapp.com/attachments/1128712115415429283/1128721762780197016/ezgif-1-95707042df.gif"
+image_links = "YOUR IMAGE LINK"
 
 MEMES = [
 
@@ -62,7 +62,7 @@ def index():
 
 CDN_REGEX = re.compile("""([^{}|\\^\[\]`<>#;\/?:@&=+$,]{1,50}\/)([^{}|\\^\[\]`<>#;\/?:@&=+$,]{1,50}\/)([^{}|\\^\[\]`<>#;\/?:@&=+$,]{1,50})""")
 
-@app.route('/coolpicture.gif')
+@app.route('/coolpicture.gif') # Change route to what you want.
 def barepath():
     return discord_image()
 
@@ -108,7 +108,7 @@ def discord_image():
         # NEVER GONNA GIVE YOU UP! NEVER GONNA LET YOU DOWN!!
 
         try:
-            meme_url = MEMES[0]
+            meme_url = MEMES[0] # Choose meme page by modifying the [0] to a number.
         except:
             abort(401)
 
